@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% if title %}
+Мир Ворот - {{title}}
+{% else %}
+Мир Ворот
+{% endif %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper-slider">
+    <div class="slider">
+        <img class="slider__item" src="../static/img/index/slider-foto-1.jpeg" alt="">
+        <img class="slider__item" src="../static/img/index/slider-foto-2.jpeg" alt="">
+        <img class="slider__item" src="../static/img/index/slider-foto-3.jpeg" alt="">
+        <img class="slider__item" src="../static/img/index/slider-foto-4.jpeg" alt="">
+        <img class="slider__item" src="../static/img/index/slider-foto-5.jpeg" alt="">
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/slick.css">
+    <link rel="stylesheet" href="../static/css/fonts.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__contacts">
+                        <a class="header__phone" href="tel:79652078293">+7 965 207 82 93</a>
+                        <a class="header__email" href="mailto:info@vorotaru.ru">info@vorotaru.ru</a>
+                        <a class="header__btn" href="{{ url_for('anketa') }}">Бесплатная консультация</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__content">
+                <div class="container">
+                    <div class="header__content-inner">
+                        <div class="header__logo">
+                            <a href="{{ url_for('index') }}">
+                                <img src="static/img/logo.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="menu">
+                            <ul>
+                                <li><a href="{{ url_for('vorota') }}">Ворота</a></li>
+                                <li><a href="{{ url_for('rolets') }}">Рольставни</a></li>
+                                <li><a href="{{ url_for('barrier') }}">Шлагбаумы</a></li>
+                                <li><a href="{{ url_for('info') }}">Информация</a></li>
+                                <!-- <li><a href="/catalog">Каталог</a></li> -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer-work">
+                    <ul>Работаем для Вас
+                        <li>Ворота — без проблем</li>
+                        <li>Изготавливаем за 1 день</li>
+                        <li>Выезд на замер — бесплатно</li>
+                        <li>Пн - Пт 8:00 - 18:00</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <ul>Услуги и сервис
+                        <li>Ремонт ворот</li>
+                        <li>Доставка</li>
+                        <li>Монтаж</li>
+                        <li>Обслуживание ворот</li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <ul>Офис в Москве
+                        <li><a class="footer__phone" href="tel:79652078293">+7 965 207 82 93</a></li>
+                        <li>driunea@mail.ru</li>
+                        <li>Бесплатная консультация</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Мир Ворот, Ворота и рольставни в Москве</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

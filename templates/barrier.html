@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% if title %}
+Мир Ворот - {{title}}
+{% else %}
+Мир Ворот
+{% endif %}
+{% endblock %}
+{% block content %}
+
+<div class="page__name">
+    <h1>ШЛАГБАУМЫ</h1>
+</div>
+<div class="barrier">
+    <div class="barrier__type">
+        <img src="../static/img/barrier/2.jpeg" alt="Шлагбаум">
+        <h2>Автоматический шлагбаум<br>AN-MOTORS ASB 6000 5М</h2>
+        <p class="price barrier__price">40 500,00 ₽</p>
+    </div>
+    <div class="barrier__type">
+        <img src="../static/img/barrier/3.jpeg" alt="Шлагбаум">
+        <h2>Автоматический шлагбаум<br>AN-MOTORSASB6 4М</h2>
+        <p class="price">44 940,00 ₽</p>
+    </div>
+    <div class="barrier__type">
+        <img src="../static/img/barrier/4.jpeg" alt="">
+        <h2>Автоматический шлагбаум<br>CAME GARD 2500COMBO 2.5 М</h2>
+        <p class="price">38 000,00 ₽</p>
+    </div>
+    <div class="barrier__type">
+        <img src="../static/img/barrier/1.png" alt="">
+        <h2>Автоматический шлагбаум<br>ALUTECH BRAVO BV 5</h2>
+        <p class="price">57 500,00 ₽</p>
+    </div>
+</div>
+
+{% endblock %}

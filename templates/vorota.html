@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% if title %}
+Мир Ворот - {{title}}
+{% else %}
+Мир Ворот
+{% endif %}
+{% endblock %}
+{% block content %}
+
+<div class="page__name">
+    <h1>ГАРАЖНЫЕ ВОРОТА</h1>
+    <p>ПРОИЗВОДСТВО - МОНТАЖ - СЕРВИС</p>
+    <p>
+        МЫ ПРОДАЕМ ВОРОТА СОБСТВЕННОГО ПРОИЗВОДСТВА А ТАКЖЕ ЯВЛЯЕМСЯ ДИЛЕРАМИ ИЗВЕСТНЫХ ПРОИЗВОДИТЕЛЕЙ АЛЮТЕХ И DOORHAN
+    </p>
+</div>
+<div class="vorota-foto">
+    <div class="foto-content">
+        <h3>Секционные гаражные ворота</h3>
+        <img src="../static/img/vorota/a-demo2.jpeg" alt="">
+    </div>
+    <div class="foto-content">
+        <h3>Распашные ворота в гараж</h3>
+        <img src="../static/img/vorota/avtomaticheskie-vorota-doorhan-aromatizatory-cena-bolshaya-ryazan.jpeg" alt="">
+    </div>
+    <div class="foto-content">
+        <h3>Подъёмно-поворотные ворота</h3>
+        <img src="../static/img/vorota/fasad-01.jpeg" alt="">
+    </div>
+    <div class="foto-content">
+        <h3>Подъемно-секционные ворота</h3>
+        <img src="../static/img/vorota/pod-sekcion.jpeg" alt="">
+    </div>
+    <div class="foto-content">
+        <h3>Рулонные гаражные ворота</h3>
+        <img src="../static/img/vorota/zolotoj-dub-1.jpeg" alt="">
+    </div>
+</div>
+
+{% endblock %}
