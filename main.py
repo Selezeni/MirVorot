@@ -23,7 +23,7 @@ def index():
 
 
 @app.route('/info')
-def info():
+def about():
     return render_template('about.html', title='О Нас')
 
 
@@ -68,4 +68,4 @@ def admin():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
