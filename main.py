@@ -17,14 +17,29 @@ class Message(db.Model):
     def __repr__(self):
         return f'Сообщение от: {self.name}'
 
+
 @app.route('/')
 def index():
     return render_template('index.html', title='Главная')
 
 
-@app.route('/info')
+@app.route('/info', methods=['POST', 'GET'])
 def about():
-    return render_template('about.html', title='О Нас')
+    if request.method == 'POST':
+        number = request.form['number']
+        name = request.form['name']
+        text = request.form['text']
+
+        data = Message(number=number, name=name, text=text)
+
+        try:
+            db.session.add(data)
+            db.session.commit()
+            return redirect('/')
+        except:
+            return 'Произошла ошибка попробуйте ещё раз'
+    else:
+        return render_template('about.html', title='О Нас')
 
 
 @app.route('/vorota')
