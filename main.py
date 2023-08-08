@@ -80,9 +80,3 @@ def anketa():
 def admin():
     messages = Message.query.order_by(Message.date.desc()).all()
     return render_template('admin.html', title='Просмотр сообщений', data=messages)
-
-
-if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
-        app.run(debug=True, port=5000, host='0.0.0.0')
